@@ -1,24 +1,20 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Note - The template for displaying 404 pages (Not Found)
+ *
+ * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
+ *
+ * @package 	WordPress
+ * @subpackage 	Starkers
+ * @since 		Starkers 4.0
+ */
+?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<div class="container">
+	<div class="twelve columns">
+		<h2>Page not found</h2>
+	</div>
+</div>
 
-			<!-- article -->
-			<article id="post-404">
-
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
-
-			</article>
-			<!-- /article -->
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
