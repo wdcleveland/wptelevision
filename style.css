@@ -1,182 +1,84 @@
 /*
-Theme Name: 	Indicia Design Customized
-Description: 	Your customized theme by Indicia Design
-Author: 		Indicia Design
-Author URI: 	http://www.indiciadesign.com
+Theme Name: 	Cleveland TV
+Description: 	Cleveland Television Custom Wordpress Theme
+Author: 		Taylor S. Carter
+Author URI: 	https://www.cleveland.edu/
+Version: 	1.0
 */
 
 /*
-===========================
 CONTENTS:
-
-02 Site Styles
-03 Media Queries
-===========================
+00: Fonts, Branding, etc.
+01 Cheats, Quick Fixes, Misc.
+02 Sitewide Styles
+03 Media Queries, Mobile Fixes
+04 Cross-Browser Fixes
 */
 
 
-/* ----------------------------------------------------------------------------------------------------------
-01 Site Styles ----------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------- */
+/* SECTION 00:
+Fonts, Branding, etc. */
+
+/* TITLES, HEADLINES, etc.
+Proxima Nova CSS
+font-family: proxima-nova, sans-serif;
+font-style: normal;
+
+Proxima Nova Thin
+font-weight: 100;
+
+Proxima Nova Light
+font-weight: 300;
+
+Proxima Nova Regular
+font-weight: 400;
+
+Proxima Nova Medium
+font-weight: 500;
+
+Proxima Nova Semibold
+font-weight: 600;
+
+Proxima Nova Bold
+font-weight: 700;
+
+Proxima Nova Extrabold
+font-weight: 800;
+
+Proxima Nova Black
+font-weight: 900; */
 
 
-/***
-User Profile Sidebar by @keenthemes
-A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
-Licensed under MIT
-***/
+/* BODY COPY
+Minion Pro CSS
+font-family: minion-pro, serif;
+
+Minion Pro Regular
+font-weight: 400;
+font-style: normal;
+
+Minion Pro Italic
+font-weight: 400;
+font-style: italic;
+
+Minion Pro Semibold
+font-weight: 600;
+font-style: normal;
+
+Minion Pro Semibold Italic
+font-weight: 600;
+font-style: italic;
+
+Minion Pro Bold
+font-weight: 700;
+font-style: normal;
+Minion Pro Bold Italic
+
+font-weight: 700;
+font-style: italic; */
 
 
-/***
-Content
-***/
-
-/*PIE CHART*/
-
-
-/*RSS*/
-
-#input_6_44 .instruction {
-  display: none;
-}
-
-.rss_image {
-    display: none;
-}
-
-#feed_container {
-    max-width: 90%;
-}
-
-.feedzy-rss ul {
-  display: block;
-}
-
-#donutchart {
-  display: none;
-}
-
-.feedzy-rss .rss_item .rss_content small {
-    text-transform: uppercase;
-    color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 2;
-    letter-spacing: 0px;
-}
-
-.feedzy-rss .rss_item .rss_content small a {
-    text-transform: uppercase;
-    color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 2;
-    letter-spacing: 0px;
-}
-
-.feedzy-rss .rss_item .title {
-    text-transform: uppercase;
-    color: #163146;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
-
-.feedzy-rss .rss_item .title a {
-    text-transform: uppercase;
-    color: #163146;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
-
-.feedzy-rss .rss_item {
-    padding: 20px 20px 20px !important;
-    margin: 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    border-left: 6px solid #eee;
-}
-
-.feedzy-rss .rss_item:hover {
-    border-left: 6px solid #bfd855;
-}
-
-sub {
-    color: #163146 !important;
-}
-
-thead {
-    color: #bfd855 !important;
-}
-
-#link_table_fix a {
-    text-decoration: none !important;
-    color: #163146 !important;
-}
-
-#link_table_fix a:hover {
-    text-decoration: underline !important;
-}
-
-input {
-    border-top: 3px solid #ebebeb !important;
-    border-left: 3px solid #ebebeb !important;
-    border-right: 3px solid #ebebeb !important;
-    border-bottom: 3px solid #ebebeb !important;
-}
-
-input:hover {
-    border-bottom: 3px solid #bfd855 !important;
-}
-
-input:focus {
-    border-bottom: 3px solid #bfd855 !important;
-}
-
-input[type=file] {
-    border-top: 0px solid #ebebeb !important;
-    border-left: 0px solid #ebebeb !important;
-    border-right: 0px solid #ebebeb !important;
-    border-bottom: 0px solid #ebebeb !important;
-}
-
-input[type=file]:hover {
-    border-top: 0px solid #ebebeb !important;
-    border-left: 0px solid #ebebeb !important;
-    border-right: 0px solid #ebebeb !important;
-    border-bottom: 0px solid #ebebeb !important;
-}
-
-input[type=submit] {
-    border-top: 0px solid #ebebeb !important;
-    border-left: 0px solid #ebebeb !important;
-    border-right: 0px solid #ebebeb !important;
-    border-bottom: 0px solid #ebebeb !important;
-}
-
-input[type=submit]:hover {
-    border-top: 0px solid #ebebeb !important;
-    border-left: 0px solid #ebebeb !important;
-    border-right: 0px solid #ebebeb !important;
-    border-bottom: 0px solid #ebebeb !important;
-}
-
-:focus {
-    outline: -webkit-focus-ring-color auto 0px;
-}
-
-/*TEXT SELECTION COLOR*/
+/* TEXT HIGHLIGHT COLOR(s) If You're Feeling RULLL Fancy */
 
 ::selection {
   background: #bfd855; /* WebKit/Blink Browsers */
@@ -187,63 +89,27 @@ input[type=submit]:hover {
   opacity: 0.75;
 }
 
-/*FORMS*/
+/* SECTION 01:
+Cheats, Quick Fixes, Misc. */
 
-.gfield_required {
-    display: none !important;
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.gfield_description {
-    text-transform: uppercase !important;
-    padding-top: 9px !important;
-    padding-bottom: 15px !important;
-    letter-spacing: 1px !important;
-}
 
-body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox, body .gform_wrapper ul li.field_description_below div.ginput_container_radio {
-    margin-top: 10px !important;
-}
+/* SECTION 02:
+Sitewide Styles */
 
-body .gform_wrapper ul li.gfield {
-    margin-top: 10px !important;
-}
-
-.gfield_label {
-    display: none !important;
-}
-
-/*body .gform_wrapper .top_label div.ginput_container {
-    margin-top: 0px !important;
-}
-
-body .gform_wrapper ul li.gfield {
-    margin-top: -15px !important;
-    padding-top: 10px !important;
-}*/
-
-#input_1_6 {
-    font-size: 1.5rem !important;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase !important;
-    color: #bfd855 !important;
-}
-
-/*.form-border-left {
-    float: left;
-}
-
-.form-border-right {
-    float: right;
-}*/
-
-#input_1_5 input[type=text] {
-    border: 1px solid red;
-}
-
-/*NAVIGATION, ETC.*/
+/* NAVIGATION */
 
 .navbar {
-    background-color: rgba(0,0,0,0.1);
+    background-color: #444444;
 }
 
 .navbar-toggle {
@@ -256,7 +122,7 @@ body .gform_wrapper ul li.gfield {
 }
 
 .navbar-collapse {
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
@@ -280,76 +146,38 @@ body .gform_wrapper ul li.gfield {
     border: 2.5px solid #bfd855;
 }
 
-.dropdown-menu > li > a {
-    color: #ffffff !important;
-    margin-top: 0px !important;
-    padding: 5px 15px 5px 15px !important;
-    border: 2.5px solid transparent !important;
-    letter-spacing: 2px !important;
-    font-weight: 400 !important;
-    font-size: 1rem !important;
-}
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    color: #163146 !important;
-    background-color: #bfd855 !important;
-}
-
-.dropdown-menu {
-    background-color: rgba(0,0,0,0.85) !important;
-}
-
-#nav-myaccount {
-    margin-left: 0px;
-}
-
-#nav-myaccount a {
-    font-weight: 500 !important;
-    color: #163146 !important;
-    border: 2.5px solid #bfd855 !important;
-    background-color: #bfd855;
-}
-
-#nav-myaccount a:hover {
-    font-weight: 500 !important;
-    color: #ffffff !important;
-    border: 2.5px solid #bfd855 !important;
-    background-color: #bfd855;
-}
-
-/*END*/
-
-
-
-/*BODY*/
+/* BODY */
 
 .content {
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     /*padding-top: 40px;
     padding-bottom: 40px;
     color: #f2f2f2;*/
 }
 
-/*END*/
-
-
 
 /*FOOTER - PADDING, LOGO, NAV, ETC.*/
 
-a.sitetag  { color: #fcb034; font-weight: 400; text-transform: uppercase }
+a.sitetag {
+    color: #fcb034;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
     padding-top: 15px;
     padding-bottom: 15px;
     background: #163146;
     border-top: 15px solid #bfd855;
+    /* Set the fixed height of the footer here */
 }
 
 .footer-nav {
-    display: none;
-}
-
-.navbar-bottom .navbar-nav #nav-myaccount {
     display: none;
 }
 
@@ -357,20 +185,10 @@ footer {
     text-align: center;
 }
 
-#contact .container .row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-#rss_feed .container .row {
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
 .navbar-bottom {
-    text-transform: uppercase;
+    text-transform: none;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     font-weight: 200;
 }
@@ -416,7 +234,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-weight: 400 !important;
     display: inline-block;
     padding: 5px 60px 5px 60px;
@@ -526,12 +344,7 @@ input[type="button"].button-secondary:focus {
 }
 
 .navbar {
-    background: url('http://prospectus.flywheelsites.com/wp-content/uploads/2017/08/prospectus-hero.png') no-repeat center center fixed;
-}
-
-.homepage-hero .container-fluid {
-    background: url('http://prospectus.flywheelsites.com/wp-content/uploads/2017/08/prospectus-hero.png') no-repeat center center fixed;
-}
+    background-color: #444444;
 
 #who-we-are {
     padding-top: 90px;
@@ -566,18 +379,6 @@ input[type="button"].button-secondary:focus {
     background-color: #ffffff;
 }
 
-#rss_feed {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    background-color: #ffffff;
-}
-
-#rss_feed img {
-    max-width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .horizontal-green {
     border-bottom: 3px solid #bfd855;
     margin-top: 30px;
@@ -598,7 +399,7 @@ input[type="button"].button-secondary:focus {
 /*TYPOGRAPHY*/
 
 #homepage .page-information h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: italic;
     font-weight: 200;
     color: #fff059;
@@ -611,7 +412,7 @@ input[type="button"].button-secondary:focus {
 }
 
 #homepage .page-information h2 strong{
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: italic;
     font-weight: 400;
     color: #ffffff;
@@ -651,7 +452,7 @@ h2 {
 h3 {
     color: #163146;
     text-transform: ;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
@@ -664,7 +465,7 @@ h3 {
 
 .homepage-hero p {
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 1.25rem;
@@ -678,7 +479,7 @@ h3 {
 
 #who-we-are p {
     color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.25rem;
@@ -688,7 +489,7 @@ h3 {
 
 #how-can-we-help h3 {
     color: #163146;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     text-transform: uppercase;
     font-weight: 600;
@@ -702,7 +503,7 @@ h3 {
 
 #how-can-we-help h4 {
     color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1rem;
@@ -712,7 +513,7 @@ h3 {
 
 #how-can-we-help p {
     color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.25rem;
@@ -758,7 +559,7 @@ h3 {
     margin-right: 0%;
     margin-bottom: 60px;
     color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.25rem;
@@ -777,7 +578,7 @@ h3 {
     margin-right: 0%;
     margin-bottom: 60px;
     color: #7d7d7d;
-    font-family: 'Montserrat', sans-serif;
+    font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.25rem;
@@ -875,7 +676,7 @@ h3 {
 
     .homepage-hero p {
         color: #ffffff;
-        font-family: 'Montserrat', sans-serif;
+        font-family: proxima-nova, sans-serif;
         font-style: normal;
         font-weight: 200;
         font-size: 1.5rem;

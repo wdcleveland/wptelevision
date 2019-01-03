@@ -42,19 +42,7 @@
 	add_filter( 'nav_menu_item_id', 'nav_id_filter', 10, 2 );
 
 
-	if( function_exists('acf_add_options_page') ) {
-
-		acf_add_options_page(array(
-			'page_title' 	=> 'Sitewide Fields',
-			'menu_title'	=> 'Sitewide Fields',
-			'menu_slug' 	=> 'sitewide-fields',
-			'capability'	=> 'edit_posts',
-			'redirect'		=> false
-		));
-
-	}
-
-	/* Actions and Filters
+/* Actions and Filters
 	======================================================================================================================== */
 
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
@@ -167,9 +155,6 @@
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 		wp_enqueue_script( 'site' );
 
-		wp_register_script( 'resnavjs', get_template_directory_uri().'/js/responsive-nav.js', array( 'jquery' ) );
-		wp_enqueue_script( 'resnavjs' );
-
 	}
 
 	// Register Style
@@ -178,14 +163,8 @@
 		wp_register_style( 'normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css', false, false );
 		wp_enqueue_style( 'normalize' );
 
-		wp_register_style( 'skeleton', get_template_directory_uri().'/css/skeleton.css', array( 'normalize' ), false );
-		wp_enqueue_style( 'skeleton' );
-
 		wp_register_style( 'screen', get_template_directory_uri().'/style.css', array( 'normalize', 'skeleton' ), false );
 		wp_enqueue_style( 'screen' );
-
-		wp_register_style( 'resnav', get_template_directory_uri().'/css/responsive-nav.css', array( 'screen' ), false );
-		wp_enqueue_style( 'resnav' );
 
 		wp_register_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', false, false );
 		wp_enqueue_style( 'fontawesome' );
@@ -198,3 +177,21 @@
 	 * Load Bootstrap Menu.
 	 */
 	require get_template_directory() . '/bootstrap-walker.php';
+
+	if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+
+// if( function_exists('acf_add_options_page') ) {
+//
+// 	acf_add_options_page(array(
+// 		'page_title' 	=> 'Sitewide Fields',
+// 		'menu_title'	=> 'Sitewide Fields',
+// 		'menu_slug' 	=> 'sitewide-fields',
+// 		'capability'	=> 'edit_posts',
+// 		'redirect'		=> false
+// 	));
+//
+// }

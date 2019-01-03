@@ -1089,7 +1089,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -1102,7 +1102,7 @@ button,
 select,
 textarea {
   /*font-family: inherit;*/
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-family: proxima-nova, sans-serif;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1194,7 +1194,7 @@ h6,
 .h5,
 .h6 {
   /*font-family: inherit;*/
-  font-family: 'Montserrat', sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
