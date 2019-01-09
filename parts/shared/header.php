@@ -8,15 +8,16 @@
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('main_logo', 'option'); ?>"></a>
 				</div>
 
-				<div class="navbar-collapse collapse navbar-responsive-collapse">
+				<!-- <div class="navbar-collapse collapse navbar-responsive-collapse"> -->
 					<div class="nav navbar-nav navbar-right">
+
 						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 						<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 						<script src="http://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.min.js"></script>
 						<script>
-							// document.getElementById("demo").innerHTML = 5 + 6;
 						  // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 							// document.write(moment().format('MMMM Do YYYY, h:mm:ss a'))
+							
 							var datetime = null,
 							        date = null;
 
@@ -32,9 +33,12 @@
 							});
 
 						</script>
-						<div id="datetime"></div>
+
+						<div>
+							<h3 id="datetime"></h3>
+						</div>
 					</div>
-				</div>
+				<!-- </div> -->
 			</div>
 		</div>
 	</nav>
