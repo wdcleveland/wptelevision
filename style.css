@@ -21,10 +21,10 @@ Fonts, Branding, etc. */
 
 h1 {
   color: #ffffff;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 5.5rem;
   line-height: 1;
   margin-top: 0px;
@@ -34,29 +34,57 @@ h1 {
 
 h2 {
   color: #163146;
-  text-transform: uppercase;
-  font-family: minion-pro, serif;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 2.25em;
-  line-height: 1;
+  line-height: 1.25;
   letter-spacing: 2px;
   margin-bottom: 30px;
   margin-top: 0px;
 }
 
 h3 {
-  color: #163146;
+  color: #fff;
   text-transform: none;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
-  font-weight: 400;
-  font-size: 1em;
+  font-weight: 600;
+  font-size: 1.5em;
   line-height: 1;
   letter-spacing: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 0px;
   text-align: center;
+}
+
+h4 {
+  color: #ffffff;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+h5 {
+  color: #444444;
+  text-transform: none;
+  font-family: minion-pro, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  text-align: left;
 }
 
 /* TITLES, HEADLINES, etc.
@@ -133,6 +161,14 @@ font-style: italic; */
 /* SECTION 01:
 Cheats, Quick Fixes, Misc. */
 
+#curved_top {
+  -webkit-clip-path: ellipse(77% 100% at 50% 0%);
+  clip-path: ellipse(77% 100% at 50% 0%);
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top: 0px;
+}
+
 .carousel-item {
   height: 100vh;
   min-height: 300px;
@@ -165,10 +201,12 @@ Sitewide Styles */
 h3#datetime {
   font-family: proxima-nova, sans-serif;
   color: #ffffff;
-  font-size: 1.75rem;
-  font-weight: 300;
-  padding-top: 40px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-top: 30px;
   line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -206,13 +244,14 @@ a.sitetag {
 }
 
 marquee {
-  color: #333;
-  height: 50px;
+  color: #444444;
+  height: 40px;
   font-weight: 400;
 }
 
 marquee p {
   margin-bottom: 0px;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -221,8 +260,8 @@ footer {
     width: 100%;
     /* Set the fixed height of the footer here */
     height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #ffffff;
 }
 
