@@ -47,13 +47,13 @@
 
             <div id="" class="carousel-item" style="background-color: #78a22f;">
               <div align="center" class="row" style="margin: 0px; width: 100vw; height: 100vh; ">
-                <div class="col-md-12" style="width: 100vw; height: 35vh;">
+                <div class="col-md-12" style="width: 100vw; height: 30vh;">
                   <div style="position: absolute; bottom: 30px; width: 100%;">
                     <h1 style="color: #ffffff; font-size: 3.5rem; font-weight: 800; margin-top: 0px; margin-bottom: 5px;">Café Cleveland Menu</h1>
                     <h2 style="color: #ffffff; font-size: 2rem; margin-bottom: 0px; margin-top: 0px;"><?php the_sub_field('dates'); ?></h2>
                   </div>
                 </div>
-                <div class="col-md-12" style="padding: 45px 0px; height: 40vh; background-color: #4d8aa4;">
+                <div class="col-md-12" style="padding: 45px 0px; height: 45vh; background-color: #4d8aa4;">
                   <div class="row">
                     <div class="col-md-6" style="">
                       <h3>On The Grill</h3>
@@ -70,6 +70,37 @@
                 <div class="col-md-12" style="height: 25vh;">
                   <div style="position: absolute; top: 30px; width: 100%;">
                     <h1 style="color: #ffffff; font-size: 2.75rem; margin-bottom: 0px;"><?php the_sub_field('company_kitchen'); ?></h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <?php elseif(get_row_layout() == "prospective_students"): // layout: prospective students ?>
+
+            <div id="" class="carousel-item" style="background-color: #f0b310;">
+              <div align="center" class="row" style="margin: 0px; width: 100vw; height: 100vh; ">
+                <div class="col-md-12" style="width: 100vw; height: 25vh;">
+                  <div class="row" style="position: absolute; bottom: 30px; width: 100%;">
+                    <div class="col-md-6" style="">
+                    </div>
+                    <div align="center" class="col-md-6" style="">
+                      <h1 style="color: #444444; font-size: 3.5rem; font-weight: 800; margin-top: 0px; margin-bottom: 5px;">Prospective Students</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12" style="padding: 45px 0px; height: 55vh; background-color: #b60050;">
+                  <div class="row" style="position: absolute; top: 60px; width: 100%;">
+                    <div class="col-md-6" style="">
+                      <img style="max-width: 80%; margin-left: auto; margin-right: auto; border: 3px solid #ffffff; border-radius: 5px;" src="<?php the_sub_field('campus_img'); ?>">
+                    </div>
+                    <div align="center" class="col-md-6" style="">
+                      <?php the_sub_field('names'); ?>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12" style="height: 20vh;">
+                  <div style="position: absolute; top: 30px; width: 100%;">
+                    <h1 style="color: #444444; font-size: 2.75rem; margin-bottom: 0px;"><strong>Touring Campus</strong> <?php the_sub_field('tour_date'); ?></h1>
                   </div>
                 </div>
               </div>
@@ -138,7 +169,7 @@
                     <h1 style="color: #ffffff; text-transform: uppercase; font-weight: 800; font-size: 3rem; margin-bottom: 0px;"><?php the_sub_field('header'); ?></h1>
                   </div>
                 </div>
-                <div class="col-md-12" style="padding: 50px 0px; height: 55vh;">
+                <div class="col-md-12" style="padding: 50px 0px; height: 50vh;">
                   <div style="position: absolute; bottom: 30px; width: 100%; padding: 10%;">
                     <h1 style="color: #ffffff; font-size: 4em; margin-bottom: 10px;"><strong>Call: <?php the_sub_field('phone_number'); ?></strong></h1>
                     <h1 style="color: #ffffff; font-size: 3rem; margin-bottom: 10px;"><?php the_sub_field('subtext_a'); ?></h1>

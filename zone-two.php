@@ -16,38 +16,110 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-      <?php if(have_rows('slides')): ?>
+  <?php if( get_field('zone_slides') ): ?>
 
-        <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox">
 
-          <?php while(have_rows('slides')): the_row(); ?>
+      <?php while( has_sub_field("zone_slides") ): ?>
 
-            <div id="" class="carousel-item <?php the_sub_field('starting_slide'); ?>" style="background-color: <?php the_sub_field('bg_color'); ?>;">
+        <?php if(get_row_layout() == "welcome_screen"): // layout: welcome_screen ?>
 
-              <div class="row">
-                <div class="" style="width: 100vw; height: 100vh; margin: 170px 60px; border-radius: 0px; border: 3px solid #ffffff; background: url('<?php the_sub_field('bg_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
-                  <div style="padding: 30px; position: absolute; top: 400; left: 50; border-radius: 0px 0px 9px 0px; border-right: 3px solid #ffffff; border-bottom: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
-                    <img style="max-width: 150px;" src="<?php the_field('white_logo', 'option'); ?>">
-                  </div>
-                  <div style="padding: 30px; position: absolute; bottom: 100px; right: 48px; border-radius: 9px 0px 0px 0px; border-left: 3px solid #ffffff; border-top: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
-                    <h1 style="color: #ffffff; font-size: 30px; margin-bottom: 0px;">Be the difference.</h1>
-                  </div>
+          <div id="" class="carousel-item active">
+            <div align="right" class="row" style="background: url('<?php the_sub_field('bg_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+              <div class="col-md-6">
+              </div>
+              <div id="welcome_health" align="right" class="col-md-6" style="height: 100vh; background-color: rgba(182,0,80,0.75);">
+                <div style="padding: 60px; position: absolute; top: 20%; right: 10%;">
+                  <h1 style="color: #ffffff; text-transform: uppercase; font-weight: 800; font-size: 4rem; padding-bottom: 20px; border-bottom: 3px solid #f0b310; margin-bottom: 20px;"><?php the_sub_field('text'); ?></h1>
+                  <h2 style="color: #ffffff; font-size: 2rem; margin-bottom: 0px;"><?php the_sub_field('subtext'); ?></h2>
                 </div>
               </div>
             </div>
+          </div>
 
-          <?php endwhile; ?>
+        <?php elseif(get_row_layout() == "did_you_know"): // layout: did you know? ?>
 
-        </div>
+          <!-- <div id="" class="carousel-item"  style="text-shadow: #000000 3px; width: 100vw; height: 100vh; background: url('<?php the_sub_field('dyk_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+            <div align="left" class="row">
+              <div class="" style="width: 100vw; height: 100vh; margin: 150px 60px ;">
+                <div style="padding: 30px; position: absolute; top: 25%; left: 50px;">
+                  <h1><?php the_sub_field('dyk_title'); ?></h1>
+                  <h2 style="color: #ffffff; font-size: 2rem; margin-bottom: 0px; max-width: 75%;"><?php the_sub_field('dyk_fact'); ?></h2>
+                  <img style="max-width: 250px; margin-top: 30px;" src="<?php the_field('main_logo', 'option'); ?>">
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div id="" class="carousel-item" style="background: url('<?php the_sub_field('dyk_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+            <div align="left" class="row">
+              <div id="dyk_health" align="left" class="col-md-4" style="height: 60vh; background-color: rgba(182,0,80,0.75);">
+                <div style="padding: 60px; position: absolute; top: 20%; left: 5%;">
+                  <h1 style="color: #ffffff; text-transform: uppercase; font-weight: 800; font-size: 3rem; padding-bottom: 20px; border-bottom: 3px solid #f0b310; margin-bottom: 20px;"><?php the_sub_field('dyk_title'); ?></h1>
+                  <h2 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 0px;"><?php the_sub_field('dyk_fact'); ?></h2>
+                  <img style="max-width: 200px; margin-top: 20px;" src="<?php the_field('main_logo', 'option'); ?>">
+                </div>
+              </div>
+              <div class="col-md-8">
+              </div>
+            </div>
+          </div>
 
-      <?php endif; ?>
+        <?php elseif(get_row_layout() == "custom"): // layout: custom ?>
+
+          <div id="" class="carousel-item"  style="width: 100vw; height: 100vh; background: url('<?php the_sub_field('full_size_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+          </div>
+
+        <?php elseif(get_row_layout() == "two_thirds_left_curved"): // layout: left curved ?>
+
+          <div id="" class="carousel-item"  style="width: 100vw; height: 100vh;">
+            <div align="left" class="row" style="background-color: #b60050;">
+              <div class="col-md-3">
+                <div style="padding: 60px; position: absolute; top: 15%; left: 5%;">
+                  <h1 style="color: #ffffff; text-transform: uppercase; font-weight: 800; font-size: 3.25rem; padding-bottom: 20px; border-bottom: 3px solid #f0b310; margin-bottom: 20px;"><?php the_sub_field('intro_left'); ?></h1>
+                  <h2 style="color: #ffffff; font-size: 2.25rem; margin-bottom: 0px;"><?php the_sub_field('excerpt_left'); ?></h2>
+                </div>
+                <div style="padding: 30px 60px; position: absolute; bottom: 10%; left: 5%;">
+                  <img style="max-width: 200px; margin-top: 0px;" src="<?php the_field('main_logo', 'option'); ?>">
+                </div>
+              </div>
+              <div id="curved_left" class="col-md-9" style="height: 100vh; border: 9px solid #ffffff; background: url('<?php the_sub_field('image_right'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+              </div>
+            </div>
+          </div>
+
+
+        <?php elseif(get_row_layout() == "two_thirds_right_curved"): // layout: right curved ?>
+
+          <div id="" class="carousel-item"  style="width: 100vw; height: 100vh;">
+            <div align="right" class="row" style="background-color: #f0b310;">
+              <div id="curved_right" class="col-md-9" style="; height: 100vh; border: 9px solid #ffffff; background: url('<?php the_sub_field('image_left'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+              </div>
+              <div class="col-md-3">
+                <div style="padding: 60px; position: absolute; top: 15%; right: 5%;">
+                  <h1 style="color: #ffffff; text-transform: uppercase; font-weight: 800; font-size: 3.25rem; padding-bottom: 20px; border-bottom: 3px solid #b60050; margin-bottom: 20px;"><?php the_sub_field('intro_right'); ?></h1>
+                  <h2 style="color: #ffffff; font-size: 2.25em; margin-bottom: 0px;"><?php the_sub_field('excerpt_right'); ?></h2>
+                </div>
+                <div style="padding: 30px 60px; position: absolute; bottom: 10%; right: 5%;">
+                  <img style="max-width: 200px; margin-top: 0px;" src="<?php the_field('main_logo', 'option'); ?>">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <?php endif; ?>
+
+      <?php endwhile; ?>
 
     </div>
 
-  <?php endwhile; ?>
+    <?php endif; ?>
+
+  </div>
+
+<?php endwhile; ?>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
