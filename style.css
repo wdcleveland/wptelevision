@@ -227,6 +227,8 @@ h3#datetime {
   line-height: 1;
   letter-spacing: 1px;
   margin-bottom: 30px;
+  min-width: 510px;
+  text-align: left;
 }
 
 .navbar-default .navbar-nav > li > a {

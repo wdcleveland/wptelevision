@@ -11,19 +11,19 @@
 				<!-- <div class="navbar-collapse collapse navbar-responsive-collapse"> -->
 					<div class="nav navbar-nav navbar-right">
 
-						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-						<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-						<script src="http://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.min.js"></script>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.4/moment-timezone-with-data.min.js"></script>
 						<script>
 						  // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 							// document.write(moment().format('MMMM Do YYYY, h:mm:ss a'))
-							
+
 							var datetime = null,
 							        date = null;
 
 							var update = function () {
 							    date = moment(new Date())
-							    datetime.html(date.format('dddd, MMMM Do YYYY, h:mm:ss a'));
+							    datetime.html(date.format('dddd, MMMM D YYYY, h:mm:ss a'));
 							};
 
 							$(document).ready(function(){
