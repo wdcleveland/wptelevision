@@ -24,7 +24,7 @@ h1 {
   text-transform: none;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 5.5rem;
   line-height: 1;
   margin-top: 0px;
@@ -64,9 +64,9 @@ h4 {
   text-transform: none;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
-  font-weight: 200;
-  font-size: 1.75rem;
-  line-height: 1.5;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 1.25;
   letter-spacing: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -76,7 +76,7 @@ h4 {
 h5 {
   color: #444444;
   text-transform: none;
-  font-family: minion-pro, serif;
+  font-family: proxima-nova, sans-serif;
   font-style: italic;
   font-weight: 600;
   font-size: 1.25rem;
@@ -146,6 +146,35 @@ font-weight: 700;
 font-style: italic; */
 
 
+/* AUX. COPY
+Calibri CSS
+font-family: calibri, sans-serif;
+
+Calibri Light
+font-weight: 300;
+font-style: normal;
+
+Calibri Light Italic
+font-weight: 300;
+font-style: italic;
+
+Calibri Regular
+font-weight: 400;
+font-style: normal;
+
+Calibri Italic
+font-weight: 400;
+font-style: italic;
+
+Calibri Bold
+font-weight: 700;
+font-style: normal;
+
+Calibri Bold Italic
+font-weight: 700;
+font-style: italic; */
+
+
 /* TEXT HIGHLIGHT COLOR(s) If You're Feeling RULLL Fancy */
 
 ::selection {
@@ -160,6 +189,48 @@ font-style: italic; */
 
 /* SECTION 01:
 Cheats, Quick Fixes, Misc. */
+
+/* Sets up our marquee, and inner content */
+.marquee {
+    overflow: hidden;
+    position: relative;
+    padding-left: 100%;
+    /* Some browsers may require -webkit-animation */
+    animation: reduce 75s linear infinite;
+}
+
+        .marquee__inner {
+            white-space: nowrap;
+            display: inline-block;
+            /* Some browsers may require -webkit-animation */
+            animation: scroll 75s linear infinite;
+        }
+
+/* Creates two white-to-transparent gradients at the ends of the marquee */
+.marquee::before, .marquee::after {
+    z-index: 1;
+    bottom: 10; left: 0;
+    position: absolute;
+    width: 50px; height: 40px;
+    content: ""; display: block;
+}
+
+.marquee::after {
+    left: auto; right: 0;
+    transform: rotate(180deg);
+}
+
+@keyframes reduce {
+    to {
+        padding-left: 0;
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX( -100% );
+    }
+}
 
 #curved_top {
   -webkit-clip-path: ellipse(77% 100% at 50% 0%);
@@ -227,7 +298,7 @@ h3#datetime {
   line-height: 1;
   letter-spacing: 1px;
   margin-bottom: 30px;
-  min-width: 510px;
+  /* min-width: 510px; */
   text-align: left;
 }
 
@@ -265,15 +336,15 @@ a.sitetag {
     text-transform: uppercase;
 }
 
-marquee {
+.marquee {
   color: #444444;
   height: 40px;
   font-weight: 400;
 }
 
-marquee p {
+.marquee p {
   margin-bottom: 0px;
-  font-size: 1.5rem;
+  font-size: 1.85rem;
 }
 
 footer {
@@ -283,7 +354,7 @@ footer {
     /* Set the fixed height of the footer here */
     height: auto;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
     background: #ffffff;
 }
 

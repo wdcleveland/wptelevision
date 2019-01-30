@@ -23,7 +23,7 @@
 
 							var update = function () {
 							    date = moment(new Date())
-							    datetime.html(date.format('dddd, MMMM D YYYY, h:mm:ss a'));
+							    datetime.html(date.format('dddd, MMMM D YYYY, h:mm A'));
 							};
 
 							$(document).ready(function(){

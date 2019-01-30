@@ -26,15 +26,15 @@
 
           <?php while(have_rows('slides')): the_row(); ?>
 
-            <div id="" class="carousel-item <?php the_sub_field('starting_slide'); ?>" style="background-color: <?php the_sub_field('bg_color'); ?>;">
+            <div id="" class="carousel-item <?php the_sub_field('starting_slide'); ?>" style="background: url('<?php the_sub_field('bg_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
 
               <div class="row">
-                <div class="" style="width: 100vw; height: 100vh; margin: 0px 60px; border-radius: 0px; border: 3px solid #ffffff; background: url('<?php the_sub_field('bg_img'); ?>') no-repeat center center fixed;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; ">
+                <div class="" style="">
                   <!-- <div style="padding: 30px; position: absolute; top: 400; left: 50; border-radius: 0px 0px 25px 0px; border-right: 3px solid #ffffff; border-bottom: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
                     <img style="max-width: 150px;" src="<?php the_field('white_logo', 'option'); ?>">
                   </div> -->
-                  <div style="padding: 30px 45px; position: absolute; bottom: 70px; right: 48px; border-radius: 25px 0px 0px 0px; border-left: 3px solid #ffffff; border-top: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
-                    <h1 style="color: #ffffff; font-size: 30px; margin-bottom: 0px;">Be the difference.</h1>
+                  <div style="padding: 45px 60px; position: absolute; bottom: 150px; right: 150px; border-radius: 25px 0px 25px 0px; border: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
+                    <h1 style="color: #ffffff; font-size: 45px; font-weight: 600; letter-spacing: 1px; font-style: italic; margin-bottom: 0px;">Be the difference.</h1>
                   </div>
                 </div>
               </div>
@@ -46,6 +46,14 @@
 
       <?php endif; ?>
 
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
   <?php endwhile; ?>
