@@ -18,7 +18,7 @@
 
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval="17000" data-ride="carousel">
 
       <?php if(have_rows('slides')): ?>
 
@@ -33,14 +33,16 @@
                   <!-- <div style="padding: 30px; position: absolute; top: 400; left: 50; border-radius: 0px 0px 25px 0px; border-right: 3px solid #ffffff; border-bottom: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
                     <img style="max-width: 150px;" src="<?php the_field('white_logo', 'option'); ?>">
                   </div> -->
-                  <div style="padding: 45px 60px; position: absolute; bottom: 150px; right: 150px; border-radius: 25px 0px 25px 0px; border: 3px solid #ffffff; background-color: <?php the_sub_field('overlay_color'); ?>;">
-                    <h1 style="color: #ffffff; font-size: 45px; font-weight: 600; letter-spacing: 1px; font-style: italic; margin-bottom: 0px;">Be the difference.</h1>
-                  </div>
+
                 </div>
               </div>
             </div>
 
           <?php endwhile; ?>
+
+          <div style="padding: 45px 60px; position: absolute; bottom: 100px; right: 150px; border-radius: 25px 25px 0px 0px; border: 3px solid #ffffff; background-color: #b60050;">
+            <h1 style="color: #ffffff; font-size: 45px; font-weight: 600; letter-spacing: 1px; font-style: italic; margin-bottom: 0px;">Be the difference.</h1>
+          </div>
 
         </div>
 
